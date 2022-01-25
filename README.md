@@ -20,12 +20,16 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * _React Rating Library_
   * _Normal ReactJS API calling and fetching_
 * **Main implementation problems you had facing [Personal Opinon]:**
-  * Problem with using ReactJS hooks some hooks and classes are Deprecated 
-  * useEffect hook when calling two different API it was hard to use it without the clean up function 
-  * Looping inside html Element with JSX 
-  * Challenge of not using FrameWork to make the website Responsive, instead do it with CSS
+  * Problem with using ReactJS hooks some hooks and classes are Deprecated .
+  * useEffect hook when calling two different API it was hard to use it without the clean up function .
+  * Looping inside html Element with JSX .
+  * Challenge of not using FrameWork to make the website Responsive, instead do it with CSS.
   * The use of css grid,flex and structuring elements and containers of the page with the respsect to the responsivity
-  * The use of Animations, Transitions with the respsect to Responsivity
+  * The use of Animations, Transitions with the respsect to Responsivity.
+* **Conclusion - What is the place of enhancement if this Project hosted on the internet:**
+  * the use of an online data base to store user details (Microsoft Azure).
+  * Having login, sign up page. Using asp.net core for API and MS SQL to store data.
+  * Protect Routing between react components.
 
 * Screenshots of the internal app after building:
 
