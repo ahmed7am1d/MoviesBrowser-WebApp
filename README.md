@@ -11,8 +11,22 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * user is able to see the details about the movie that he want.
   * Website is fully responsive at any screen size (Media Quries Pure Css).
 
+* Technologies used:
+  * HTML5
+  * CSS3
+  * JS
+  * ReactJS
+  * Font Awesome Library
+  * React Rating Library
+  * Normal ReactJS API calling and fetching
+* Main implementation problems you had facing [Personal Opinon]:
+  * Problem with using ReactJS hooks some hooks and classes are Deprecated 
+  * useEffect hook when calling two different API it was hard to use it without the clean up function 
+  * Looping inside html Element with JSX 
+  * Challenge of not using FrameWork to make the website Responsive, instead do it with CSS
 
-* Screenshots of the internal app after building
+* Screenshots of the internal app after building:
+
 <img src="websiteScreenShots/landPage.png" width="1000"></img>
 <img src="websiteScreenShots/movieDetailPage.png" width="1000"></img>
 <img src="websiteScreenShots/searchMoviePage.png" width="1000"></img>
