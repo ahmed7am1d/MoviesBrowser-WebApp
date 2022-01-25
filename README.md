@@ -28,7 +28,7 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * The use of Animations, Transitions with the respsect to Responsivity.
 * **Conclusion - What is the place of enhancement if this Project hosted on the internet:**
   * the use of an online data base to store user details (Microsoft Azure).
-  * Having login, sign up page. Using asp.net core for API and MS SQL to store data.
+  * Having login, sign up page. Using asp.net core for API and MS SQL to store data. [My Future Plan for this repo]
   * Protect Routing between react components.
 
 * **Screenshots of the internal app after building:**
