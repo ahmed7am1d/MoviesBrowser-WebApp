@@ -1,5 +1,5 @@
 # MoviesBrowser-WebApp
-![GitHub all releases](https://img.shields.io/github/downloads/ahmed7am1d/MovieBrowser/total?logo=GitHub&style=flat-square)
+![GitHub all releases](https://img.shields.io/github/downloads/ahmed7am1d/MoviesBrowser-WebApp/total?logo=GitHub&style=flat-square)
 ### Description of the App:
 A Web application built with (HTML, CSS, JS, React JS), that's allow the user to search for movies and tv shows and see full details about them and add them to his watch list or watched movies(DATA WILL BE STORED USING LOCAL STORAGE)
 * **Description of the main functionality:**
