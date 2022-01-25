@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react/cjs/react.development";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import watcheListICON from "../Images-videos/watching-a-movie.png";
 
 export const Watchlist = () => {
   //1- Access our watchlist save it inside watchList
@@ -12,10 +13,10 @@ export const Watchlist = () => {
       <div className="container">
         <div className="header">
           <h1 className="heading">Watch Later Movies</h1>
-          <span className="count-pill">
-          {watchList.length} {watchList.length === 1 ? 'Movie' : 'Movies'}
-          </span>
-        </div>
+          <div className="count-pill-div" numberofWatchedMovie={watchList.length}>
+                <img src={watcheListICON} className="count-pill"/>
+                </div>
+                </div>
 
 
         {watchList.length > 0 ? (<div className="movie-grid">

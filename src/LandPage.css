@@ -5,6 +5,7 @@
   color: white;
  
 }
+
 /*#region 1-Welcome section */
 .welcomeSection {
   margin-top: 60px;
@@ -224,6 +225,7 @@
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     height: 50px;
+    box-shadow: 2px 3px 40px rgba(18, 89, 148, 1);
   }
   .sectionButton button:hover {
     background-color: var(--primary);

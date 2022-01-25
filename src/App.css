@@ -287,8 +287,20 @@ header .nav-links li:last-child {
 /* Movie Page */
 .movie-page {
   padding: 30px 0;
+  animation: moviePageAnimation 2s 1 linear;
+  -webkit-animation: moviePageAnimation 2s 1 linear;
 }
 
+@keyframes moviePageAnimation {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+  
+}
 .movie-page .header {
   display: flex;
   align-items: center;
@@ -299,11 +311,47 @@ header .nav-links li:last-child {
 .count-pill {
   display: block;
   background-color: var(--secondary);
+  opacity: 0.9;
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: 700px;
   color: var(--primary);
+  width: 80px;
+  -webkit-border-radius: 700px;
+  -moz-border-radius: 700px;
+  -ms-border-radius: 700px;
+  -o-border-radius: 700px;
+  position: relative;
+  box-shadow: 2px 3px 40px rgb(18 89 148),-2px -3px 40px rgb(18 89 148);
+
+}
+.count-pill-div{
+  position: relative;
+  
+}
+.count-pill-div::before {
+  content: attr(numberofWatchedMovie);
+  background-color: rgb(18 89 148);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  z-index: 2;
 }
 
 .movie-page .heading {

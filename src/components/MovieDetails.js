@@ -1,78 +1,135 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react/cjs/react.development";
-
-
+import axios from "axios";
 
 export const MovieDetails = () => {
   //1- Getting the movie id from any page
   let params = useParams();
   const [specficMovieDetails, setspecficMovieDetails] = useState([]);
   const [genersList, setgenersList] = useState([]);
-  const [movieTrailerLinlk,setMovieTrailerLink] = useState(null);
+  const [movieTrailerLinlk, setMovieTrailerLink] = useState("");
   //2- retrive the movie object from the api
   //we will use (useEffect) to retrive new info everytime the component is loaded
+  let one = "https://api.themoviedb.org/3/movie/" +
+    params.movie +
+    "?api_key=" +
+    process.env.REACT_APP_TMDB_KEY +
+    "&language=en-US";
+  let two = "https://api.themoviedb.org/3/movie/" +
+    params.movie +
+    "/videos?api_key=" +
+    process.env.REACT_APP_TMDB_KEY +
+    "&language=en-US";
+
+    const requestOne = axios.get(one);
+    const requestTwo = axios.get(two);
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch(
-      "https://api.themoviedb.org/3/movie/" +
-        params.movie +
-        "?api_key=" +
-        process.env.REACT_APP_TMDB_KEY +
-        "&language=en-US"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data.errors) {
-          setspecficMovieDetails(data);
-          setgenersList(data.genres);
-    
-        } else {
-          setspecficMovieDetails(null);
-        }
-      });
-      
-  
-    }, []);
+    axios.all([requestOne, requestTwo]).then(
+    axios.spread((...responses) => {
+      const responseOne = responses[0];
+      const responseTwo = responses[1];
+      // use/access the results
+      setspecficMovieDetails(responseOne.data);
+      setgenersList(responseOne.data.genres);
+      setMovieTrailerLink("https://www.youtube.com/watch?v="+responseTwo.data.results[0].key);
+
+    })
+  )
+  .catch(errors => {
+    // react on errors.
+    console.error(errors);
+  });
+  }, []);
   //3- getting the rating stars
-  let arrayStars  = [];
-  switch(parseInt(specficMovieDetails.vote_average,10)) {
+  let arrayStars = [];
+  switch (parseInt(specficMovieDetails.vote_average, 10)) {
     case 1:
-      arrayStars=["fa fa-star"];
+      arrayStars = ["fa fa-star"];
       break;
     case 2:
-      arrayStars = ["fa fa-star","fa fa-star"];
+      arrayStars = ["fa fa-star", "fa fa-star"];
       break;
     case 3:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = ["fa fa-star", "fa fa-star", "fa fa-star"];
       break;
     case 4:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = ["fa fa-star", "fa fa-star", "fa fa-star", "fa fa-star"];
       break;
     case 5:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
     case 6:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
     case 7:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
-    case 8: 
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+    case 8:
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
     case 9:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
     case 10:
-      arrayStars = ["fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star","fa fa-star"];
+      arrayStars = [
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+        "fa fa-star",
+      ];
       break;
-  };
-  //4- getting the youtube link trailer for the specified movie 
-  // useEffect(()=>{
-  //   fetch("https://api.themoviedb.org/3/movie/"+params.movie+"/videos?api_key="+process.process.env.REACT_APP_TMDB_KEY+"&language=en-US")
-  // },[]);
-
+  }
+ 
   return (
     <div className="mainPage">
       <div className="upperSectionbg">
@@ -92,20 +149,19 @@ export const MovieDetails = () => {
             {/* give it margin zero from above and down  */}
 
             <div className="ratingDes">
-            <div className="ratingValue">{specficMovieDetails.vote_average}</div>
-            <div className="ratingStars">
-              {arrayStars.map((star) => (
-                <i className={star}></i>
-              ))}
+              <div className="ratingValue">
+                {specficMovieDetails.vote_average}
+              </div>
+              <div className="ratingStars">
+                {arrayStars.map((star) => (
+                  <i className={star}></i>
+                ))}
+              </div>
             </div>
-            </div>
-
-              
             <h3>
               <span style={{ color: "var(--secondary)" }}>Budget:</span>{" "}
               {specficMovieDetails.budget}$
             </h3>
-
             <div className="genres">
               {genersList.map((gener) => (
                 <div key={gener.id}>{gener.name} </div>
@@ -114,15 +170,16 @@ export const MovieDetails = () => {
           </div>
 
           <div className="buttonsRow">
-            <a>Play Trailer<i className="fas fa-play">
-              </i></a>
+            <a href={movieTrailerLinlk} target='_blank'>
+              Play Trailer
+              <i className="fas fa-play"></i>
+            </a>
           </div>
         </div>
       </div>
-      
+
       <div className="lowerSection">
         <div className="container">
-
           <h3 className="aboutHeader">About the movie :</h3>
           <img
             className="backdropPath"
