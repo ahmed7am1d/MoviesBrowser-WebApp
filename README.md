@@ -24,6 +24,8 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * useEffect hook when calling two different API it was hard to use it without the clean up function 
   * Looping inside html Element with JSX 
   * Challenge of not using FrameWork to make the website Responsive, instead do it with CSS
+  * The use of css grid,flex and structuring elements and containers of the page with the respsect to the responsivity
+  * The use of Animations, Transitions with the respsect to Responsivity
 
 * Screenshots of the internal app after building:
 
