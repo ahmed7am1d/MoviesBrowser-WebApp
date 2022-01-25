@@ -10,8 +10,9 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * Showing the weekly trending movies around the world in the landPage (intro page).
   * user is able to see the details about the movie that he want.
   * Website is fully responsive at any screen size (Media Quries Pure Css).
- 
- #### - Screenshots of the internal app after building:
+
+
+* ** Screenshots of the internal app after building**
 <img src="websiteScreenShots/landPage.png" width="1000"></img>
 <img src="websiteScreenShots/movieDetailPage.png" width="500"></img>
 <img src="websiteScreenShots/searchMoviePage.png" width="500"></img>
