@@ -11,15 +11,15 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * user is able to see the details about the movie that he want.
   * Website is fully responsive at any screen size (Media Quries Pure Css).
 
-* Technologies used:
-  * HTML5
-  * CSS3
-  * JS
-  * ReactJS
-  * Font Awesome Library
-  * React Rating Library
-  * Normal ReactJS API calling and fetching
-* Main implementation problems you had facing [Personal Opinon]:
+* **Technologies used:**
+  * _HTML5_
+  * _CSS3_
+  * _JS_
+  * _ReactJS_
+  * _Font Awesome Library_
+  * _React Rating Library_
+  * _Normal ReactJS API calling and fetching_
+* **Main implementation problems you had facing [Personal Opinon]:**
   * Problem with using ReactJS hooks some hooks and classes are Deprecated 
   * useEffect hook when calling two different API it was hard to use it without the clean up function 
   * Looping inside html Element with JSX 
