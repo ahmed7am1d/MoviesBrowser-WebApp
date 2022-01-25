@@ -31,7 +31,7 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * Having login, sign up page. Using asp.net core for API and MS SQL to store data.
   * Protect Routing between react components.
 
-* Screenshots of the internal app after building:
+* **Screenshots of the internal app after building:**
 
 <img src="websiteScreenShots/landPage.png" width="1000"></img>
 <img src="websiteScreenShots/movieDetailPage.png" width="1000"></img>
