@@ -19,6 +19,7 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * _Font Awesome Library_
   * _React Rating Library_
   * _Normal ReactJS API calling and fetching_
+  * Axios ReactJS Library for purpose of MULTIPLE API SYNC REQUESTS.
 * **Main implementation problems you had facing [Personal Opinon]:**
   * Problem with using ReactJS hooks some hooks and classes are Deprecated .
   * useEffect hook when calling two different API it was hard to use it without the clean up function .
