@@ -1,0 +1,252 @@
+.introductionPage {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "welcomeSection" "weeklyTrendingSection";
+  color: white;
+ 
+}
+/*#region 1-Welcome section */
+.welcomeSection {
+  margin-top: 60px;
+  grid-area: welcomeSection;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-template-areas: "leftSection rightSection";
+  width: 100%;
+  animation-name: welcomeSectionAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes welcomeSectionAnimation {
+    from {
+      opacity: 0.1;
+      position: relative;
+      left: 20%;
+    }
+    to {
+      opacity: 1;
+      position: relative;
+      left: 0;
+    }
+  }
+
+.rightSection {
+  grid-area: rightSection;
+}
+.rightSection img {
+  width: 500px;
+  height: 500px;
+}
+
+.leftSection {
+  grid-area: leftSection;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.moviesClassifications div {
+  display: inline-block;
+  margin: 10px;
+}
+
+.hdIcon {
+  background-color: var(--secondary);
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.movieAgeRating {
+  background-color: var(--white);
+  color: var(--secondary);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.moviesType {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--secondary);
+}
+
+.moviesDate div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.moviesDate img {
+  height: 30px;
+  width: 30px;
+}
+
+.moviesTime div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.moviesTime img {
+  height: 30px;
+  width: 30px;
+}
+
+.searchMovieButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: 1px solid var(--secondary);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.searchMovieButton img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.searchMovieButton:hover {
+  background-color: var(--secondary);
+  color: black;
+  border-color: white;
+}
+
+.searchMovieButton {
+  text-decoration: none;
+  text-transform: none;
+}
+/*#endregion*/
+
+/*#region 2- weekly Trending Section  */
+.weeklyTrendingSection {
+    grid-area: weeklyTrendingSection;
+    margin-top: 50px;
+    animation-name: weeklySectionAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  
+  @keyframes weeklySectionAnimation {
+      from {
+        opacity: 0.1;
+        position: relative;
+        right: 20%;
+      }
+      to {
+        opacity: 1;
+        position: relative;
+        right: 0;
+      }
+    }
+  
+  
+  .descriptionTrend h3 {
+    color: var(--secondary);
+  }
+  .descriptionTrend h1 {
+    position: relative;
+  }
+  .descriptionTrend h1::after {
+    content: "";
+    background-image: linear-gradient(
+      90deg,
+      rgba(33, 208, 122, 1) 18%,
+      rgba(93, 121, 105, 1) 33%,
+      rgba(11, 70, 84, 1) 52%,
+      rgba(19, 90, 106, 1) 59%,
+      rgba(18, 89, 148, 1) 67%,
+      rgba(66, 19, 228, 1) 86%
+    );
+    position: absolute;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+  }
+  
+  .descriptionTrend {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sectionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionButton button {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid white;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    height: 50px;
+  }
+  .sectionButton button:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+  
+/*#endregion*/
+
+
+@media (max-width:1259px) {
+    .rightSection img {
+        display: none;
+    }
+    .welcomeSection {
+        grid-template-areas: "leftSection leftSection";
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .leftSection a {
+        display: flex;
+        align-self: center;
+    }
+    
+}

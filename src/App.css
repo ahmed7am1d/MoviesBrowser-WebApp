@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff;
+  --backgroundColor: #19222b;
+}
+::selection {
+  background-color: var(--secondary);
+  color: white;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--backgroundColor);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
+}
+
+.btn:hover {
+  background-color: #1aa762;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus {
+  outline: none;
+  caret-color: var(--secondary);
+}
+/*#region Header and Nav Styles */
+/* Header Styles */
+
+header {
+  /* background-color: var(--primary); */
+  /* font-style: italic; */
+  /* box-shadow: 2px 2px 10px var(--secondary),-2px -2px 10px var(--secondary); */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: 1px 2px 25px var(--secondary);
+}
+
+header .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header a {
+  color: var(--white);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  opacity: 0.7;
+}
+
+header .brand a {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+}
+
+header .nav-links li::before {
+  content: "";
+  background-color: var(--secondary);
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+header .nav-links li:hover::before {
+  animation-name: linksHover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+header .nav-links li:last-child:hover::before {
+  animation-name: linksHover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-color: var(--white);
+}
+
+@keyframes linksHover {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.brandLogo {
+  animation-name: logoFlip;
+  animation-duration: 2s;
+  margin-right: 20px;
+}
+@keyframes logoFlip {
+  0% {
+    transform: rotate(0deg), scale(0);
+    -webkit-transform: rotate(0deg), scale(0);
+    -moz-transform: rotate(0deg), scale(0);
+    -ms-transform: rotate(0deg), scale(0);
+    -o-transform: rotate(0deg), scale(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.brand * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/*#endregion*/
+
+/*#region Add Page Styling */
+/* Add Page */
+.add-content {
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-content .input-wrapper input {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.results {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.results li {
+  list-style: none;
+}
+
+.result-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.result-card .poster-wrapper img,
+.filler-poster {
+  width: 75px;
+  height: 113px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+.result-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-card .info .title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 400;
+  margin: 0;
+  color: white;
+}
+
+.result-card .info .release-date {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--primary);
+  margin: 0;
+  color: gray;
+}
+
+.result-card .controls button {
+  margin-right: 10px;
+}
+
+.info .title:hover,
+.poster-wrapper:hover {
+  cursor: pointer;
+}
+
+
+
+
+/*#endregion*/
+
+/*#region Movie Page styling  */
+/* Movie Page */
+.movie-page {
+  padding: 30px 0;
+}
+
+.movie-page .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.count-pill {
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--primary);
+}
+
+.movie-page .heading {
+  color: white;
+  margin: 0;
+  position: relative;
+}
+
+.movie-page .heading::after {
+  content: "";
+  background-color: var(--secondary);
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  top: 100;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation-name: headerUnderLine;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes headerUnderLine {
+  from {
+    top: 100;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  to {
+    top: 100;
+    left: 60%;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.movie-card {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover .overlay {
+  /* border: 3px solid var(--secondary); */
+}
+
+.movie-card:hover {
+  box-shadow: 2px 2px 15px var(--secondary), -2px -2px 15px var(--secondary);
+}
+
+.movie-card .inner-card-controls {
+  display: inline;
+  background-color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.ctrl-btn {
+  color: #fefefe;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.movie-page .no-movies {
+  color: #c4c4c4;
+  font-size: 3rem;
+  text-align: center;
+}
+/*#endregion*/
