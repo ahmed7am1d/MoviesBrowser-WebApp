@@ -8,7 +8,7 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * C# developers that worked before with the **MVVM** structure.
  
  #### - Screenshots of the internal app after building:
-<img src="websiteScreenShots/landPage.png" width="200"></img>
+<img src="websiteScreenShots/landPage.png" width="1000"></img>
 <img src="websiteScreenShots/movieDetailPage.png" width="500"></img>
 <img src="websiteScreenShots/searchMoviePage.png" width="500"></img>
 <img src="websiteScreenShots/watchLater-Page.png" width="500"></img>
