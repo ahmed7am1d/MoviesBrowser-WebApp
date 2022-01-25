@@ -3,7 +3,7 @@
 ### <span style="color:blue">Description of the App:</span>
 A Web application built with (HTML, CSS, JS, React JS), that's allow the user to search for movies and tv shows and see full details about them and add them to his watch list or watched movies(DATA WILL BE STORED USING LOCAL STORAGE)
 * **Description of the main functionality:**
-  * Fetching an a movie API and get info.
+  * Fetching a movie API and get info.
   * store the user prefered movie using API Context (ReactJS) and Hooks and then store it as Local storage in website cache.
   * User has the ability to search for any movie and add them to his watch later list or as a watched movie.
   * User has the ability also to remove his watched movies or watch later movies any time.
