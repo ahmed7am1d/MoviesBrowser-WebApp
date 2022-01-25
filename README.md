@@ -12,12 +12,12 @@ A Web application built with (HTML, CSS, JS, React JS), that's allow the user to
   * Website is fully responsive at any screen size (Media Quries Pure Css).
 
 
-* ** Screenshots of the internal app after building**
+* Screenshots of the internal app after building
 <img src="websiteScreenShots/landPage.png" width="1000"></img>
-<img src="websiteScreenShots/movieDetailPage.png" width="500"></img>
-<img src="websiteScreenShots/searchMoviePage.png" width="500"></img>
-<img src="websiteScreenShots/watchLater-Page.png" width="500"></img>
-<img src="websiteScreenShots/watchMoviePage.png" width="500"></img>
+<img src="websiteScreenShots/movieDetailPage.png" width="1000"></img>
+<img src="websiteScreenShots/searchMoviePage.png" width="1000"></img>
+<img src="websiteScreenShots/watchLater-Page.png" width="1000"></img>
+<img src="websiteScreenShots/watchMoviePage.png" width="1000"></img>
 
 * for the purpose of the Copyrights (credits) the following Website API is used:
   * API: https://www.themoviedb.org/
